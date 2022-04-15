@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogrambot.photos import PHOTOS
+from pyrogram.types import InlineKeyboardMarkup
 
 @Client.on_message(filters.command("start")) 
 async def start_message(bot, message):
