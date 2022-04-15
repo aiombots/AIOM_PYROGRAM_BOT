@@ -38,7 +38,7 @@ async def start_message(bot, message):
         get="Gᴏᴏᴅ Nɪɢʜᴛ"
     await message.reply_photo(
         photo=random.choice(PHOTOS),
-        caption=f"""Hᴇʟʟᴏ 👋, {message.from_user.mention}
+        caption=f"""{get} 👋, {message.from_user.mention}
 
 Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ Tʜɪs Gᴜʏ
 
