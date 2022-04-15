@@ -21,6 +21,7 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.edit("●●●●●")
         asyncio.sleep(0.9)
         await msg.message.edit(
+            text="Here Is You're Menu",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
     elif msg.data == "sticker":
