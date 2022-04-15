@@ -6,18 +6,6 @@ from pyrogram.errors import UserNotParticipant
 import random
 import asyncio
 import pytz, datetime
-
-m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
-time = m.hour
-
-if time < 12:
-     get="Good Morning"
- elif time < 15:
-     get="Good Afternoon"
-elif time < 20:
-     get="Good Evening"
-else:
-     get="Good Night"
 FORCE_SUB = "AIOM_PYRO"
 
 
@@ -37,6 +25,17 @@ async def start_message(bot, message):
                  reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url="https://t.me/AIOM_PYRO") ]])
              )
              return
+    m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+    time = m.hour
+
+    if time < 12:
+        get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
+    elif time < 15:
+        get="Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ"
+    elif time < 20:
+        get="Gᴏᴏᴅ Eᴠᴇɴɪɴɢ"
+    else:
+        get="Gᴏᴏᴅ Nɪɢʜᴛ"
     await message.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""Hᴇʟʟᴏ 👋, {message.from_user.mention}
