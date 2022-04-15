@@ -1,12 +1,25 @@
 from pyrogram import Client, filters
 from pyrogrambot.photos import PHOTOS
 from pyrogrambot.buttons import button
-from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 import random
+FORCE_SUB = "AIOM_PYRO"
 
 @Client.on_message(filters.command("start")) 
 async def start_message(bot, message):
+    if FORCE_SUB:
+        try:
+            user = await bot.get_chat_member(FORCE_SUB, message.chat.id)
+            if user.status == "kicked out":
+                await message.reply_text("<b>Aᴄᴄᴇꜱꜱ ᴅᴇɴɪᴇᴅ 🚸</b>")
+                return
+        except UserNotParticipant:
+             await message.reply_text(
+                 text="Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Tʜɪs Bᴏᴛ",
+                 reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton(text="Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url="AIOM_PYRO") ]])
+             )
+             return
     await message.reply_photo(
         photo=random.choice(PHOTOS),
         caption=f"""Hᴇʟʟᴏ 👋, {message.from_user.mention}
