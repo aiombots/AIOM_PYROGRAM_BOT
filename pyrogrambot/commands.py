@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pyrogrambot.photos import PHOTOS
 from pyrogrambot.buttons import button
 from pyrogram.types import InlineKeyboardMarkup
+from pyrogram.errors import UserNotParticipant
 import random
 
 @Client.on_message(filters.command("start")) 
