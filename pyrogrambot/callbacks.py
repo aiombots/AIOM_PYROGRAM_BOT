@@ -25,7 +25,7 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
     elif msg.data == "sticker":
-        await msg.message.edit(
+        await msg.message.reply_sticker(
             sticker="CAACAgIAAxkBAAECR5FiWgOUsaX2iRWuUtv8Y7AvIPoNuQAC-hAAAqHHKEg5ZXbrk1gHox4E",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
