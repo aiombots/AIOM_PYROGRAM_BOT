@@ -38,10 +38,10 @@ async def start_message(bot, message):
         get="Gᴏᴏᴅ Nɪɢʜᴛ"
     await message.reply_photo(
         photo=random.choice(PHOTOS),
-        caption=f"""{get} 👋, {message.from_user.mention}
+        caption=f"""<b>{get} 👋, {message.from_user.mention}
 
-Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ Tʜɪs Gᴜʏ
+Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/AIOM_BOTS)
 
-Cʜᴇᴄᴋ Oᴜᴛ Mʏ Fᴜᴛᴜʀᴇ's""",
+Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
         reply_markup=InlineKeyboardMarkup(button)
     )
