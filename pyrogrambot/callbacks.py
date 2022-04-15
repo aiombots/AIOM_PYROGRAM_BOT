@@ -11,5 +11,5 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.edit("●●●●○")
         await msg.message.edit("●●●●●")
         await msg.message.edit(
-            text=f" hello {msg.from_user.mention}  Start Text"
+            text=f"hi"
         )
