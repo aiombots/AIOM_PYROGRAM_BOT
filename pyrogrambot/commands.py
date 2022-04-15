@@ -5,7 +5,21 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 import random
 import asyncio
+import pytz, datetime
+
+m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+time = m.hour
+
+if time < 12:
+     get="Good Morning"
+ elif time < 15:
+     get="Good Afternoon"
+elif time < 20:
+     get="Good Evening"
+else:
+     get="Good Night"
 FORCE_SUB = "AIOM_PYRO"
+
 
 @Client.on_message(filters.command("start")) 
 async def start_message(bot, message):
