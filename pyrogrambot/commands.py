@@ -9,7 +9,7 @@ FORCE_SUB = "AIOM_PYRO"
 
 @Client.on_message(filters.command("start")) 
 async def start_message(bot, message):
-    await bot.send_chat_action(chat_id=message.from_user.id, "Typing")
+    await bot.send_chat_action(message.from_user.id, "Typing")
     await asyncio.sleep(2)
     if FORCE_SUB:
         try:
