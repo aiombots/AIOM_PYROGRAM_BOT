@@ -21,3 +21,9 @@ MENU_BUTTON = [[
 MOVIE_BUTTON = [[
                InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="next")
                ]]
+
+COMMM_BUTTON = [[
+               InlineKeyboardButton("+ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜ'ʀᴇ Gʀᴏᴜᴘ +", url="http://t.me/AIOM_PYROGRAM_BOT?startgroup=true")
+               ],[
+               InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="next")
+               ]]
