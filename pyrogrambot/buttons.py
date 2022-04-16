@@ -14,7 +14,7 @@ MENU_BUTTON = [[
               InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="movies"),
               InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
               ],[
-              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="back"),
+              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="vback"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="commands")
               ]]
 
