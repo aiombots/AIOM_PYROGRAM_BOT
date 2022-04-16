@@ -17,3 +17,7 @@ MENU_BUTTON = [[
               InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="back"),
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="commands")
               ]]
+
+MOVIE_BUTTON = [[
+               InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="next")
+               ]]
