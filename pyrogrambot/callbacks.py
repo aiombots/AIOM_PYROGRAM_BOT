@@ -25,7 +25,18 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
     elif msg.data == "sticker":
+        await msg.answer("Mode Chenged To Sticker")
+        await msg.message.delete()
         await msg.message.reply_sticker(
             sticker="CAACAgIAAxkBAAECR5FiWgOUsaX2iRWuUtv8Y7AvIPoNuQAC-hAAAqHHKEg5ZXbrk1gHox4E",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
+
+    elif msg.data == "video":
+        await msg.answer("Mode Chenged To Video")
+        await msg.message.delete()
+        await msg.message.reply_video(
+            video="https://telegra.ph/file/a976b6716470536985b5a.mp4",
+            reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
+        )
+
