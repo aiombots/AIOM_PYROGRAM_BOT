@@ -42,3 +42,17 @@ KGF_BUTTON = [[
              InlineKeyboardButton("Cʟᴏꜱᴇ", callback_data="close")
              ]]
 
+SMENU_BUTTO = [[
+              InlineKeyboardButton("Sᴛɪᴄᴋᴇʀ", callback_data="sticker"),
+              InlineKeyboardButton("Vɪᴅᴇᴏ", callback_data="video")
+              ],[
+              InlineKeyboardButton("Pʜᴏᴛᴏ", callback_data="photo"),
+              InlineKeyboardButton("Dᴇᴛᴀɪʟs", callback_data="id")
+              ],[
+              InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="smovies"),
+              InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
+              ],[
+              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="sback"),
+              InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="scommands")
+              ]]
+
