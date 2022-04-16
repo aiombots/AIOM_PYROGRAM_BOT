@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
-from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON
+from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON
 import asyncio
 from pyrogrambot.photos import PHOTOS
 import random
@@ -98,7 +98,7 @@ async def callback(bot, msg: CallbackQuery):
 │ /id - Tᴏ Gᴇᴛ Iᴅ ( ᵒⁿˡʸ ʷᵒʳᵏˢ ⁱⁿ ᵍʳᵒᵘᵖ )
 │
 ╰────────────────⍟""",
-            reply_markup=InlineKeyboardMarkup(MOVIE_BUTTON)
+            reply_markup=InlineKeyboardMarkup(COMMM_BUTTON)
         )
 
 
