@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
-from pyrogrambot.buttons import MENU_BUTTON
+from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON
 import asyncio
 from pyrogrambot.photos import PHOTOS
 import random
@@ -12,17 +12,17 @@ import random
 async def callback(bot, msg: CallbackQuery):
     if msg.data == "next":
         await msg.message.edit("○○○○○")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit("●○○○○")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit("●●○○○")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit("●●●○○")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit("●●●●○")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit("●●●●●")
-        await asyncio.sleep(0.9)
+        await asyncio.sleep(0.2)
         await msg.message.edit(
             text="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
@@ -54,5 +54,53 @@ async def callback(bot, msg: CallbackQuery):
         )
 
     elif msg.data == "id":
-        await msg.answer(f"Fɪʀsᴛ Nᴀᴍᴇ : {msg.from_user.first_name}\n Lᴀsᴛ Nᴀᴍᴇ : {msg.from_user.last_name}\nUsᴇʀɴᴀᴍᴇ : {msg.from_user.username}\n Usᴇʀ ɪᴅ : {msg.from_user.id}", show_alert=True)
+        await msg.answer(f"Fɪʀsᴛ Nᴀᴍᴇ : {msg.from_user.first_name}\nLᴀsᴛ Nᴀᴍᴇ : {msg.from_user.last_name}\nUsᴇʀɴᴀᴍᴇ : {msg.from_user.username}\nUsᴇʀ ɪᴅ : {msg.from_user.id}", show_alert=True)
+
+    elif msg.data == "movies":
+        await msg.message.edit("○○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●●")
+        await asyncio.sleep(0.2)
+        await msg.message.edit(
+            text="Tᴏ Dᴏᴡɴʟᴏᴀᴅ Kɢғ 𝟸 Sᴇɴᴅ Tʜɪs Tᴇxᴛ `kgf 2`",
+            reply_markup=InlineKeyboardMarkup(MOVIE_BUTTON)
+        )
+    elif msg.data == "close":
+        await msg.answer("Closed")
+        await msg.message.delete()
+
+    elif msg.data == "commands":
+        await msg.message.edit("○○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●●")
+        await asyncio.sleep(0.2)
+        await msg.message.edit(
+            text="""╭────────────────⍟
+│
+│ /start - Tᴏ Sᴛᴀʀᴛ Tʜɪs Bᴏᴛ
+│
+│ /id - Tᴏ Gᴇᴛ Iᴅ ( ᵒⁿˡʸ ʷᵒʳᵏˢ ⁱⁿ ᵍʳᵒᵘᵖ )
+│
+╰────────────────⍟""",
+            reply_markup=InlineKeyboardMarkup(MOVIE_BUTTON)
+        )
+
+
+        
 
