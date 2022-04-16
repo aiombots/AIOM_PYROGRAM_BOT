@@ -3,6 +3,9 @@ from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
 from pyrogrambot.buttons import MENU_BUTTON
 import asyncio
+from pyrogrambot.photos import PHOTOS
+import random
+
 
 
 @Client.on_callback_query()
@@ -21,7 +24,7 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.edit("●●●●●")
         await asyncio.sleep(0.9)
         await msg.message.edit(
-            text="Here Is You're Menu",
+            text="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
     elif msg.data == "sticker":
@@ -37,6 +40,19 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.delete()
         await msg.message.reply_video(
             video="https://telegra.ph/file/a976b6716470536985b5a.mp4",
+            caption="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
             reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
         )
+
+    elif msg.data == "photo":
+        await msg.answer("Mode Chenged To Photo")
+        await msg.message.delete()
+        await msg.message.reply_photo(
+            photo=random.choice(PHOTOS),
+            caption="Hᴇʀᴇ Is Yᴏᴜ'ʀᴇ Mᴇɴᴜ",
+            reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
+        )
+
+    elif msg.data == "id":
+        await msg.answer("Fɪʀsᴛ Nᴀᴍᴇ : {msg.from_user.first_name}\n Lᴀsᴛ Nᴀᴍᴇ : {msg.from_user.last_name}\nUsᴇʀɴᴀᴍᴇ : {msg.from_user.username}\n Usᴇʀ ɪᴅ : {msg.from_user.id}" show_alert=True)
 
