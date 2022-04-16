@@ -27,3 +27,7 @@ COMMM_BUTTON = [[
                ],[
                InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="next")
                ]]
+
+KGF_D_BUTTON = [[
+               InlineKeyboardButton("D O W N L O A D", callback_data="downlod")
+               ]]
