@@ -56,3 +56,7 @@ SMENU_BUTTO = [[
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="scommands")
               ]]
 
+S_BACK_BUTTO = [[
+               InlineKeyboardButton("Mᴇɴᴜ", callback_data="sback")
+               ]]
+
