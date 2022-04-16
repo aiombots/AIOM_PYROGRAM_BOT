@@ -54,5 +54,5 @@ async def callback(bot, msg: CallbackQuery):
         )
 
     elif msg.data == "id":
-        await msg.answer("Fɪʀsᴛ Nᴀᴍᴇ : {msg.from_user.first_name}\n Lᴀsᴛ Nᴀᴍᴇ : {msg.from_user.last_name}\nUsᴇʀɴᴀᴍᴇ : {msg.from_user.username}\n Usᴇʀ ɪᴅ : {msg.from_user.id}" show_alert=True)
+        await msg.answer(f"Fɪʀsᴛ Nᴀᴍᴇ : {msg.from_user.first_name}\n Lᴀsᴛ Nᴀᴍᴇ : {msg.from_user.last_name}\nUsᴇʀɴᴀᴍᴇ : {msg.from_user.username}\n Usᴇʀ ɪᴅ : {msg.from_user.id}", show_alert=True)
 
