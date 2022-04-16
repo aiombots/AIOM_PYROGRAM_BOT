@@ -122,6 +122,8 @@ async def callback(bot, msg: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(S_BACK_BUTTO)
         )
     elif msg.data == "pback":
+        m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        time = m.hour
         if time < 12:
             get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
         elif time < 15:
@@ -152,6 +154,8 @@ Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
     )
 
     elif msg.data == "vback":
+        m = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        time = m.hour
         if time < 12:
             get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
         elif time < 15:
