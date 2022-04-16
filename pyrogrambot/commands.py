@@ -45,3 +45,10 @@ Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](ht
 Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
         reply_markup=InlineKeyboardMarkup(button)
     )
+
+@Client.on_message(filters.group & filters.command("id")) 
+async def id_message(bot, msg):
+    text = f"""Tɪᴛʟᴇ : {msg.chat.title}
+Usᴇʀɴᴀᴍᴇ : @{msg.chat.username}
+Cʜᴀᴛ ɪᴅ : {msg.chat.id}"""
+    await msg.reply_text(text=text)
