@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
-from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON, S_BACK_BUTTO, SMENU_BUTTO
+from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON, S_BACK_BUTTO, SMENU_BUTTO, PMENU_BUTTN, button
 import asyncio
 from pyrogrambot.photos import PHOTOS
 import random
@@ -120,6 +120,36 @@ async def callback(bot, msg: CallbackQuery):
             sticker="CAACAgIAAxkBAAECR5liWidHhuUuJNcoJ_5QjliWb4I4kgAC1BEAA8CgSXknAeKPK_QMHgQ",
             reply_markup=InlineKeyboardMarkup(S_BACK_BUTTO)
         )
+    elif msg.data == "pback":
+        if time < 12:
+            get="Gᴏᴏᴅ Mᴏʀɴɪɴɢ"
+        elif time < 15:
+            get="Gᴏᴏᴅ Aғᴛᴇʀɴᴏᴏɴ"
+        elif time < 20:
+            get="Gᴏᴏᴅ Eᴠᴇɴɪɴɢ"
+        else:
+            get="Gᴏᴏᴅ Nɪɢʜᴛ"
+        await msg.message.edit("○○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●○○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●○○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●○○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●○")
+        await asyncio.sleep(0.2)
+        await msg.message.edit("●●●●●")
+        await asyncio.sleep(0.2)
+        await msg.message.edit(
+            text=f"""<b>{get} 👋, {msg.from_user.mention}
+
+Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/ajvadntr2)
+
+Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
+        reply_markup=InlineKeyboardMarkup(button)
+    )
+
 
 
         
