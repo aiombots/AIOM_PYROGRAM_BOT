@@ -56,6 +56,20 @@ SMENU_BUTTO = [[
               InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="scommands")
               ]]
 
+PMENU_BUTTN = [[
+              InlineKeyboardButton("Sᴛɪᴄᴋᴇʀ", callback_data="sticker"),
+              InlineKeyboardButton("Vɪᴅᴇᴏ", callback_data="video")
+              ],[
+              InlineKeyboardButton("Pʜᴏᴛᴏ", callback_data="photo"),
+              InlineKeyboardButton("Dᴇᴛᴀɪʟs", callback_data="id")
+              ],[
+              InlineKeyboardButton("Mᴏᴠɪᴇs", callback_data="movies"),
+              InlineKeyboardButton("Cʟᴏsᴇ", callback_data="close")
+              ],[
+              InlineKeyboardButton("« Bᴀᴄᴋ", callback_data="pback"),
+              InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅs", callback_data="commands")
+              ]]
+
 S_BACK_BUTTO = [[
                InlineKeyboardButton("Mᴇɴᴜ", callback_data="sticker")
                ]]
