@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup
 from pyrogrambot.photos import KGF_PHOTOS
 from pyrogrambot.buttons import KGF_D_BUTTON
 import random
