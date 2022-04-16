@@ -1,7 +1,7 @@
 from pyrogram.types import CallbackQuery
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram import Client
-from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON
+from pyrogrambot.buttons import MENU_BUTTON, MOVIE_BUTTON, COMMM_BUTTON, KGF_BUTTON, S_BACK_BUTTO
 import asyncio
 from pyrogrambot.photos import PHOTOS
 import random
@@ -32,7 +32,7 @@ async def callback(bot, msg: CallbackQuery):
         await msg.message.delete()
         await msg.message.reply_sticker(
             sticker="CAACAgIAAxkBAAECR5FiWgOUsaX2iRWuUtv8Y7AvIPoNuQAC-hAAAqHHKEg5ZXbrk1gHox4E",
-            reply_markup=InlineKeyboardMarkup(MENU_BUTTON)
+            reply_markup=InlineKeyboardMarkup(SMENU_BUTTO)
         )
 
     elif msg.data == "video":
@@ -113,6 +113,13 @@ async def callback(bot, msg: CallbackQuery):
 
     elif msg.data == "scommands":
         await msg.answer("/start - Tᴏ Sᴛᴀʀᴛ Tʜɪs Bᴏᴛ\n/id - Tᴏ Gᴇᴛ Iᴅ ( ᵒⁿˡʸ ʷᵒʳᵏˢ ⁱⁿ ᵍʳᵒᵘᵖ )", show_alert=True)
+
+    elif msg.data == "sback":
+        await msg.message.delete()
+        await msg.message.reply_sticker(
+            sticker="CAACAgIAAxkBAAECR5liWidHhuUuJNcoJ_5QjliWb4I4kgAC1BEAA8CgSXknAeKPK_QMHgQ",
+            reply_markup=InlineKeyboardMarkup(SMENU_BUTTO)
+        )
 
 
         
