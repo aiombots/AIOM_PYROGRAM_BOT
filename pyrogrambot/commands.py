@@ -40,7 +40,7 @@ async def start_message(bot, message):
         photo=random.choice(PHOTOS),
         caption=f"""<b>{get} 👋, {message.from_user.mention}
 
-Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/AIOM_BOTS)
+Tʜɪs Is A Pʏʀᴏɢʀᴀᴍ Bᴏᴛ Cʀᴇᴀᴛᴇᴅ Bʏ [Tʜɪs Gᴜʏ](https://t.me/ajvadntr2)
 
 Cʟɪᴄᴋ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴ Tᴏ Sᴇᴇ Mᴏʀᴇ</b>""",
         reply_markup=InlineKeyboardMarkup(button)
